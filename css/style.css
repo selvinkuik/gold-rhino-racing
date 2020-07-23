@@ -2,6 +2,9 @@ img {
   max-width: 100%;
 }
 
-.grid-item {
-  width: calc(25% - 8px);
+@media (min-width: 600px) {
+  .grid-item,
+  .stamp {
+    width: calc(25% - 8px);
+  }
 }
