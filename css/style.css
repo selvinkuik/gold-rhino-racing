@@ -1,3 +1,8 @@
+.grid-item,
+.stamp {
+  display: block;
+}
+
 img {
   max-width: 100%;
 }
