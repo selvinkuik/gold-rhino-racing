@@ -11,17 +11,29 @@ html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, figure {
   padding: 0;
 }
 
-body {
+html, body {
+  background-color: #1C2936;
+  height: 100%;
   overflow: hidden;
 }
 
-img {
+.logo {
+  left: 20px;
+  pointer-events: none;
+  position: fixed;
+  top: 20px;
+  z-index: 1;
+}
+
+.mobile,
+.grid img {
   display: block;
   max-width: 100%;
 }
 
 .grid-item {
   display: block;
+  overflow: hidden;
 }
 
 .grid-item--sizer {
@@ -50,4 +62,24 @@ img {
 
 .grid-item--width9 {
   width: calc( ((100% - 20px * 20) / 21) * 9 + 160px );
+}
+
+.zoom {
+  transition: transform 400ms;
+}
+
+.zoom:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .grid {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .mobile {
+    display: none;
+  }
 }
