@@ -1,15 +1,51 @@
-.grid-item,
-.stamp {
+*, *:before, *:after {
+  box-sizing: border-box;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, figure {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-item {
   display: block;
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
 @media (min-width: 600px) {
-  .grid-item,
-  .stamp {
-    width: calc(25% - 8px);
+  .grid-item--sizer {
+    width: calc( (100% - 20px * 20) / 21 );
+  }
+
+  .grid-item--width3 {
+    width: calc( ((100% - 20px * 20) / 21) * 3 + 40px );
+  }
+
+  .grid-item--width4 {
+    width: calc( ((100% - 20px * 20) / 21) * 4 + 60px );
+  }
+
+  .grid-item--width5 {
+    width: calc( ((100% - 20px * 20) / 21) * 5 + 80px );
+  }
+
+  .grid-item--width6 {
+    width: calc( ((100% - 20px * 20) / 21) * 6 + 100px );
+  }
+
+  .grid-item--width7 {
+    width: calc( ((100% - 20px * 20) / 21) * 7 + 120px );
+  }
+
+  .grid-item--width9 {
+    width: calc( ((100% - 20px * 20) / 21) * 9 + 160px );
   }
 }

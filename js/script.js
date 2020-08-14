@@ -1,7 +1,8 @@
 var pckry = new Packery('.grid', {
   itemSelector: '.grid-item',
-  stamp: '.stamp',
-  gutter: 8
+  columnWidth: '.grid-item--sizer',
+  gutter: 20,
+  percentPosition: true
 })
 
 var imgLoad = imagesLoaded('.grid', function() {
